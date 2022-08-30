@@ -20,7 +20,7 @@
 
     <!-- one per entry in the attribute list -->
     <DD_Attribute>
-        <name>MEAN_OBSERVATION_TIME</name>
+        <name>mean_observation_time</name>
         <version_id>1.0</version_id>
         <local_identifier>iras.mean_observation_time</local_identifier>
         <nillable_flag>false</nillable_flag>
