@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <!-- PDS4 XML/Schema for Name Space Id:iras  Version:1.0.0.0 - Tue Aug 30 17:23:41 UTC 2022 -->
+  <!-- Generated from the PDS4 Information Model Version 1.18.0.0 - System Build 12.1 -->
+  <!-- *** This PDS4 product schema is an operational deliverable. *** -->
+  <!--                                                                           -->
+  <!--               Dictionary Stack                                            -->
+  <!-- 1.18.0.0 - pds: - Common Dictionary                                       -->
+  <!-- 1.0.0.0 - iras: - IRAS Mission Dictionary                                 -->
+  <!--                                                                           -->
+  <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    targetNamespace="http://pds.nasa.gov/pds4/mission/iras/v1"
+    xmlns:iras="http://pds.nasa.gov/pds4/mission/iras/v1"
+    xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"
+    elementFormDefault="qualified"
+    attributeFormDefault="unqualified"
+    version="1.0.0.0">
+ 
+    <xs:import namespace="http://pds.nasa.gov/pds4/pds/v1" schemaLocation="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1I00.xsd"/>
+ 
+  <xs:annotation>
+    <xs:documentation>
+The mission dictionary for IRAS to support the PDS3 to 4 migration.
+    </xs:documentation>
+  </xs:annotation>
+ 
+  <xs:element name="IRAS" type="iras:IRAS"> </xs:element>
+
+  <xs:complexType name="IRAS">
+    <xs:annotation>
+      <xs:documentation>IRAS mission related
+        properties</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="Observation_Information" type="iras:Observation_Information" minOccurs="1" maxOccurs="1"> </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Observation_Information">
+    <xs:annotation>
+      <xs:documentation>Observation related properties
+        </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="mean_observation_time" type="iras:mean_observation_time" minOccurs="0" maxOccurs="1"> </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+    <xs:annotation>
+      <xs:documentation>This section contains the simpleTypes that provide more constraints
+        than those at the base data type level. The simpleTypes defined here build on the base data
+        types. This is another component of the common dictionary and therefore falls within the
+        common namespace.
+      </xs:documentation>
+    </xs:annotation>
+
+  <xs:simpleType name="mean_observation_time">
+    <xs:annotation>
+      <xs:documentation> the average date and time associated with an
+        observation that itself consists of recording multiple events
+        (photon arrival times, for example). It is distinct from
+        OBSERVATION_TIME, which is the midpoint of the observation
+        period, in that it is calculated by taking the arithmetic
+        average of all event times associated with the single
+        observation. For IRAS Additional Observation (AO) images, this
+        is the observing time spent on the target. The rest of the time
+        was used to make fine attitude updates on reference stars at the
+        beginning and at the end of an AO. </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="pds:ASCII_Short_String_Collapsed">
+     <xs:minLength value="1"/>
+     <xs:maxLength value="255"/>
+	   </xs:restriction>
+  </xs:simpleType>
+</xs:schema>
