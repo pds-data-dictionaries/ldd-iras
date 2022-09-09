@@ -39,6 +39,35 @@
         </DD_Value_Domain>
     </DD_Attribute>
 
+    <DD_Attribute>
+        <name>b1950_right_ascension</name>
+        <version_id>1.0</version_id>
+        <local_identifier>iras.b1950_right_acension</local_identifier>
+        <nillable_flag>false</nillable_flag>
+        <submitter_name>Kristina Lopez</submitter_name>
+        <definition> The B1950_right_ascension element provides the right
+            ascension of a star or other object using the B1950
+            coordinate frame rather than the J2000 frame. </definition>
+        <DD_Value_Domain>
+            <enumeration_flag>false</enumeration_flag>
+            <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
+        </DD_Value_Domain>
+    </DD_Attribute>
+
+    <DD_Attribute>
+        <name>b1950_declination</name>
+        <version_id>1.0</version_id>
+        <local_identifier>iras.b1950_declination</local_identifier>
+        <nillable_flag>false</nillable_flag>
+        <submitter_name>Kristina Lopez</submitter_name>
+        <definition> The B1950_declination element provides the declination of
+            a star or other object using the B1950 coordinate frame
+            rather than the J2000 frame. </definition>
+        <DD_Value_Domain>
+            <enumeration_flag>false</enumeration_flag>
+            <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
+        </DD_Value_Domain>
+    </DD_Attribute>
 
     <!-- on per entry in the class list -->
     <DD_Class>
@@ -71,8 +100,18 @@
             <minimum_occurrences>0</minimum_occurrences>
             <maximum_occurrences>1</maximum_occurrences>
         </DD_Association>
-        
-        
+        <DD_Association> <!-- one dd_association per relationship -->
+            <identifier_reference>iras.b1950_declination</identifier_reference>
+            <reference_type>attribute_of</reference_type> <!-- attribute_of for attributes, component_of for classes -->
+            <minimum_occurrences>0</minimum_occurrences>
+            <maximum_occurrences>1</maximum_occurrences>
+        </DD_Association>
+        <DD_Association> <!-- one dd_association per relationship -->
+            <identifier_reference>iras.b1950_right_acension</identifier_reference>
+            <reference_type>attribute_of</reference_type> <!-- attribute_of for attributes, component_of for classes -->
+            <minimum_occurrences>0</minimum_occurrences>
+            <maximum_occurrences>1</maximum_occurrences>
+        </DD_Association>
         
     </DD_Class>
     
