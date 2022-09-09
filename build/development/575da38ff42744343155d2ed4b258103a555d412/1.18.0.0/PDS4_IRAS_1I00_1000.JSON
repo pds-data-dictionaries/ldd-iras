@@ -4,7 +4,7 @@
       "Title": "PDS4 Data Dictionary" ,
       "IM Version": "1.18.0.0" ,
       "LDD Version": "1.0.0.0" ,
-      "Date": "2022-08-30T10:23:41" ,
+      "Date": "2022-09-09T11:31:21" ,
       "Description": "This document is a dump of the contents of the PDS4 Data Dictionary" ,
       "namespaces": ["pds:", "iras:"] ,
       "classDictionary": [
@@ -67,12 +67,94 @@
                  ]
               }
             }
+           , {"association": {
+                "identifier": "0001_NASA_PDS_1.iras.Observation_Information.iras.b1950_declination" ,
+                "title": "b1950_declination" ,
+                "assocType": "attribute_of" ,
+                "isAttribute": "true" ,
+                "isChoice": "false" ,
+                "isAny": "false" ,
+                "groupName": "null" ,
+                "minimumCardinality": "0" ,
+                "maximumCardinality": "1" ,
+                "classOrder": "1020" ,
+                "attributeId": [
+                  "0001_NASA_PDS_1.iras.Observation_Information.iras.b1950_declination"
+                 ]
+              }
+            }
+           , {"association": {
+                "identifier": "0001_NASA_PDS_1.iras.Observation_Information.iras.b1950_right_ascension" ,
+                "title": "b1950_right_ascension" ,
+                "assocType": "attribute_of" ,
+                "isAttribute": "true" ,
+                "isChoice": "false" ,
+                "isAny": "false" ,
+                "groupName": "null" ,
+                "minimumCardinality": "0" ,
+                "maximumCardinality": "1" ,
+                "classOrder": "1030" ,
+                "attributeId": [
+                  "0001_NASA_PDS_1.iras.Observation_Information.iras.b1950_right_ascension"
+                 ]
+              }
+            }
            ]
           }
         }
       ]
     , "attributeDictionary": [
         {
+          "attribute": {
+            "identifier": "0001_NASA_PDS_1.iras.Observation_Information.iras.b1950_declination" ,
+            "title": "b1950_declination" ,
+            "registrationAuthorityId": "0001_NASA_PDS_1" ,
+            "nameSpaceId": "iras" ,
+            "steward": "sbn" ,
+            "versionId": "1.18" ,
+            "description": " The B1950_declination element provides the declination of a star or other object using the B1950 coordinate frame rather than the J2000 frame. " ,
+            "isNillable": "false" ,
+            "isEnumerated": "false" ,
+            "isDeprecated": "false" ,
+            "dataType": "ASCII_Short_String_Collapsed" ,
+            "dataTypeId": "0001_NASA_PDS_1.pds.ASCII_Short_String_Collapsed" ,
+            "minimumCharacters": "1" ,
+            "maximumCharacters": "255" ,
+            "minimumValue": "Unbounded" ,
+            "maximumValue": "Unbounded" ,
+            "pattern": "null" ,
+            "unitOfMeasure": "null" ,
+            "unitOfMeasureId": "null" ,
+            "unitId": "null" ,
+            "defaultUnitId": "null"
+          }
+        }
+      , {
+          "attribute": {
+            "identifier": "0001_NASA_PDS_1.iras.Observation_Information.iras.b1950_right_ascension" ,
+            "title": "b1950_right_ascension" ,
+            "registrationAuthorityId": "0001_NASA_PDS_1" ,
+            "nameSpaceId": "iras" ,
+            "steward": "sbn" ,
+            "versionId": "1.18" ,
+            "description": " The B1950_right_ascension element provides the right ascension of a star or other object using the B1950 coordinate frame rather than the J2000 frame. " ,
+            "isNillable": "false" ,
+            "isEnumerated": "false" ,
+            "isDeprecated": "false" ,
+            "dataType": "ASCII_Short_String_Collapsed" ,
+            "dataTypeId": "0001_NASA_PDS_1.pds.ASCII_Short_String_Collapsed" ,
+            "minimumCharacters": "1" ,
+            "maximumCharacters": "255" ,
+            "minimumValue": "Unbounded" ,
+            "maximumValue": "Unbounded" ,
+            "pattern": "null" ,
+            "unitOfMeasure": "null" ,
+            "unitOfMeasureId": "null" ,
+            "unitId": "null" ,
+            "defaultUnitId": "null"
+          }
+        }
+      , {
           "attribute": {
             "identifier": "0001_NASA_PDS_1.iras.Observation_Information.iras.mean_observation_time" ,
             "title": "mean_observation_time" ,

@@ -7,7 +7,7 @@ Configuration:
    LDD Discipline (T/F):  false
    LDD Namespace URL:     http://pds.nasa.gov/pds4/
    LDD URN Prefix:        urn:nasa:pds:
-   Time                   Tue Aug 30 17:23:41 UTC 2022
+   Time                   Fri Sep 09 18:31:21 UTC 2022
    Common Schema          [PDS4_PDS_1I00.xsd]
    Common Schematron      [PDS4_PDS_1I00.sch]
    IM Version Id:         1.18.0.0
@@ -30,8 +30,8 @@ Parameters:
 
 Summary:
    Classes                2
-   Attributes             1
-   Associations           2
+   Attributes             3
+   Associations           4
    Error messages         0
    Warning messages       0
    Information messages   0
@@ -54,6 +54,16 @@ Parsed Input - Attributes:
    version                1.18
    value data type        ASCII_Short_String_Collapsed
    description             the average date and time associated with an observation that itself consists of recording multiple events (photon arrival times, for example). It is distinct from OBSERVATION_TIME, which is the midpoint of the observation period, in that it is calculated by taking the arithmetic average of all event times associated with the single observation. For IRAS Additional Observation (AO) images, this is the observing time spent on the target. The rest of the time was used to make fine attitude updates on reference stars at the beginning and at the end of an AO. 
+
+   name                   b1950_right_ascension
+   version                1.18
+   value data type        ASCII_Short_String_Collapsed
+   description             The B1950_right_ascension element provides the right ascension of a star or other object using the B1950 coordinate frame rather than the J2000 frame. 
+
+   name                   b1950_declination
+   version                1.18
+   value data type        ASCII_Short_String_Collapsed
+   description             The B1950_declination element provides the declination of a star or other object using the B1950 coordinate frame rather than the J2000 frame. 
 
 Parsed Input - Classes:
 
@@ -79,6 +89,16 @@ Parsed Input - Classes:
    Associations
 
       local identifier      iras.mean_observation_time
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      iras.b1950_declination
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      iras.b1950_right_acension
       minimum occurrences   0
       maximum occurrences   1
       reference type        attribute_of
