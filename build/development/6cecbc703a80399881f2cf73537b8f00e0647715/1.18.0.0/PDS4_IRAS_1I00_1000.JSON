@@ -4,7 +4,7 @@
       "Title": "PDS4 Data Dictionary" ,
       "IM Version": "1.18.0.0" ,
       "LDD Version": "1.0.0.0" ,
-      "Date": "2022-09-09T11:31:21" ,
+      "Date": "2022-09-09T13:42:12" ,
       "Description": "This document is a dump of the contents of the PDS4 Data Dictionary" ,
       "namespaces": ["pds:", "iras:"] ,
       "classDictionary": [
@@ -52,22 +52,6 @@
             "description": "Observation related properties "
               , "associationList": [
              {"association": {
-                "identifier": "0001_NASA_PDS_1.iras.Observation_Information.iras.mean_observation_time" ,
-                "title": "mean_observation_time" ,
-                "assocType": "attribute_of" ,
-                "isAttribute": "true" ,
-                "isChoice": "false" ,
-                "isAny": "false" ,
-                "groupName": "null" ,
-                "minimumCardinality": "0" ,
-                "maximumCardinality": "1" ,
-                "classOrder": "1010" ,
-                "attributeId": [
-                  "0001_NASA_PDS_1.iras.Observation_Information.iras.mean_observation_time"
-                 ]
-              }
-            }
-           , {"association": {
                 "identifier": "0001_NASA_PDS_1.iras.Observation_Information.iras.b1950_declination" ,
                 "title": "b1950_declination" ,
                 "assocType": "attribute_of" ,
@@ -77,7 +61,7 @@
                 "groupName": "null" ,
                 "minimumCardinality": "0" ,
                 "maximumCardinality": "1" ,
-                "classOrder": "1020" ,
+                "classOrder": "1010" ,
                 "attributeId": [
                   "0001_NASA_PDS_1.iras.Observation_Information.iras.b1950_declination"
                  ]
@@ -93,7 +77,7 @@
                 "groupName": "null" ,
                 "minimumCardinality": "0" ,
                 "maximumCardinality": "1" ,
-                "classOrder": "1030" ,
+                "classOrder": "1020" ,
                 "attributeId": [
                   "0001_NASA_PDS_1.iras.Observation_Information.iras.b1950_right_ascension"
                  ]
@@ -138,31 +122,6 @@
             "steward": "sbn" ,
             "versionId": "1.18" ,
             "description": " The B1950_right_ascension element provides the right ascension of a star or other object using the B1950 coordinate frame rather than the J2000 frame. " ,
-            "isNillable": "false" ,
-            "isEnumerated": "false" ,
-            "isDeprecated": "false" ,
-            "dataType": "ASCII_Short_String_Collapsed" ,
-            "dataTypeId": "0001_NASA_PDS_1.pds.ASCII_Short_String_Collapsed" ,
-            "minimumCharacters": "1" ,
-            "maximumCharacters": "255" ,
-            "minimumValue": "Unbounded" ,
-            "maximumValue": "Unbounded" ,
-            "pattern": "null" ,
-            "unitOfMeasure": "null" ,
-            "unitOfMeasureId": "null" ,
-            "unitId": "null" ,
-            "defaultUnitId": "null"
-          }
-        }
-      , {
-          "attribute": {
-            "identifier": "0001_NASA_PDS_1.iras.Observation_Information.iras.mean_observation_time" ,
-            "title": "mean_observation_time" ,
-            "registrationAuthorityId": "0001_NASA_PDS_1" ,
-            "nameSpaceId": "iras" ,
-            "steward": "sbn" ,
-            "versionId": "1.18" ,
-            "description": " the average date and time associated with an observation that itself consists of recording multiple events (photon arrival times, for example). It is distinct from OBSERVATION_TIME, which is the midpoint of the observation period, in that it is calculated by taking the arithmetic average of all event times associated with the single observation. For IRAS Additional Observation (AO) images, this is the observing time spent on the target. The rest of the time was used to make fine attitude updates on reference stars at the beginning and at the end of an AO. " ,
             "isNillable": "false" ,
             "isEnumerated": "false" ,
             "isDeprecated": "false" ,
