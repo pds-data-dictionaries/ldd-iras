@@ -19,25 +19,7 @@
 	<last_modification_date_time>2022-06-22Z</last_modification_date_time>
 
     <!-- one per entry in the attribute list -->
-    <DD_Attribute>
-        <name>mean_observation_time</name>
-        <version_id>1.0</version_id>
-        <local_identifier>iras.mean_observation_time</local_identifier>
-        <nillable_flag>false</nillable_flag>
-        <submitter_name>Kristina Lopez</submitter_name>
-        <definition> the average date and time associated
-            with an observation that itself consists of recording multiple events (photon
-            arrival times, for example). It is distinct from OBSERVATION_TIME, which is
-            the midpoint of the observation period, in that it is calculated by taking the
-            arithmetic average of all event times associated with the single observation. For
-            IRAS Additional Observation (AO) images, this is the observing time spent on
-            the target. The rest of the time was used to make fine attitude updates on
-            reference stars at the beginning and at the end of an AO. </definition>
-        <DD_Value_Domain>
-            <enumeration_flag>false</enumeration_flag>
-            <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
-        </DD_Value_Domain>
-    </DD_Attribute>
+
 
     <DD_Attribute>
         <name>b1950_right_ascension</name>
@@ -94,12 +76,6 @@
         <definition>Observation related properties </definition>
         <!-- uncomment if this is the top-level class -->
         <!-- <element_flag>true</element_flag> -->
-        <DD_Association> <!-- one dd_association per relationship -->
-            <identifier_reference>iras.mean_observation_time</identifier_reference>
-            <reference_type>attribute_of</reference_type> <!-- attribute_of for attributes, component_of for classes -->
-            <minimum_occurrences>0</minimum_occurrences>
-            <maximum_occurrences>1</maximum_occurrences>
-        </DD_Association>
         <DD_Association> <!-- one dd_association per relationship -->
             <identifier_reference>iras.b1950_declination</identifier_reference>
             <reference_type>attribute_of</reference_type> <!-- attribute_of for attributes, component_of for classes -->
